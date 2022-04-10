@@ -41,10 +41,10 @@ exports.resolver = {
     getAllListing: async (parent, args, context, info) => {
       const { isAuth, user } = context;
 
-      if (isAuth && user.type === "admin") {
-        console.log(user.username);
-        return await ListingSchema.find({ username: user.username });
-      }
+      // if (isAuth && user.type === "admin") {
+      //   console.log(user.username);
+      //   return await ListingSchema.find({ username: user.username });
+      // }
       console.log("jeng");
       return await ListingSchema.find();
     },
